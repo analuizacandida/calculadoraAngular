@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ItemLista } from './itemLista';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-lista-compras',
   imports: [
     FormsModule,
+    CommonModule
 
   ],
   templateUrl: './lista-compras.component.html',
@@ -25,4 +27,12 @@ adcionarItem() {
 
   console.table(this.lista); // -> Exibe a lista no console para depuração
 }
+  riscarItem(itemLista: ItemLista) {	
+      itemLista.comprado = !itemLista.comprado; // -> Alterna o estado de comprado do item
+     
+    }
+ limparLista() {
+    this.lista = []; // -> Limpa a lista de compras
+    console.table(this.lista); // -> Exibe a lista vazia no console para depuração
+  }
 }

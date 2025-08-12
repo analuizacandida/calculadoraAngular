@@ -64,7 +64,7 @@
   }
   
 
-  button {
+  button[type="submit"] {
     padding: 12px 20px;
     background-color: #007aff;
     color: #ffffff;
@@ -77,8 +77,21 @@
     transition: background-color 0.25s ease, transform 0.1s ease;
   }
   
-  button:hover {
+  button[type= "submit"] :hover {
     background-color: #005ecb;
+  }
+
+  button[type="button"] {
+    padding: 12px 20px;
+    background-color: #ff3b30;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.25s ease, transform 0.1s ease;
   }
   
   button:active {
@@ -124,3 +137,8 @@
     cursor: pointer;
   }
   
+
+  .item-riscado {
+    text-decoration: line-through;
+    color: #8e8e93;
+  }
